@@ -33,8 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Krypton.Toolkit, Version=80.24.3.64, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Toolkit.80.24.3.64\lib\net472\Krypton.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +50,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\FormAuthentificationController.cs" />
+    <Compile Include="view\FormAddEditAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FormAddEditAbsence.Designer.cs">
+      <DependentUpon>FormAddEditAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FormAddEditPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FormAddEditPersonnel.Designer.cs">
+      <DependentUpon>FormAddEditPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FormAbsences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FormAbsences.Designer.cs">
+      <DependentUpon>FormAbsences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FormPersonnels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FormPersonnels.Designer.cs">
+      <DependentUpon>FormPersonnels.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\FormAuthentification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,10 +91,24 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="view\FormAddEditAbsence.resx">
+      <DependentUpon>FormAddEditAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FormAddEditPersonnel.resx">
+      <DependentUpon>FormAddEditPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FormAbsences.resx">
+      <DependentUpon>FormAbsences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FormPersonnels.resx">
+      <DependentUpon>FormPersonnels.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\FormAuthentification.resx">
       <DependentUpon>FormAuthentification.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,8 +123,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="controller\" />
     <Folder Include="model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MEDIATEK86_ICON.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,14 +13,19 @@ namespace MediaTek86
     /// <summary>
     /// Fenêtre d'authentification du responsable (seul le responsable devrait avoir accès au logiciel de gestion du personnel)
     /// </summary>
-    public partial class FormAuthentification : Form
+    public partial class FormAbsences : Form
     {
         /// <summary>
         /// Construction des composants graphiques
         /// </summary>
-        public FormAuthentification()
+        public FormAbsences()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
