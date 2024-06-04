@@ -54,7 +54,6 @@ namespace MediaTek86
             this.btnUpdateAbsences.Size = new System.Drawing.Size(267, 26);
             this.btnUpdateAbsences.TabIndex = 0;
             this.btnUpdateAbsences.Values.Text = "{0} l\'absence";
-            this.btnUpdateAbsences.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // paletteSuccess
             // 
@@ -261,7 +260,6 @@ namespace MediaTek86
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MediaTek86 - {0} un personnel";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.comboMotif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

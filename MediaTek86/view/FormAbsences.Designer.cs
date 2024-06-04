@@ -282,7 +282,6 @@ namespace MediaTek86
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MediaTek86 - Gestion des absences";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grpListAbsences.Panel)).EndInit();
             this.grpListAbsences.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpListAbsences)).EndInit();

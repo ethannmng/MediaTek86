@@ -283,7 +283,6 @@ namespace MediaTek86
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MediaTek86 - Gestion des personnels";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grpListPersonnels.Panel)).EndInit();
             this.grpListPersonnels.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpListPersonnels)).EndInit();

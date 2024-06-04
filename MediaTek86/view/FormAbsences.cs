@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace MediaTek86
 {
     /// <summary>
-    /// Fenêtre d'authentification du responsable (seul le responsable devrait avoir accès au logiciel de gestion du personnel)
+    /// Fenêtre de gestion des absences
     /// </summary>
     public partial class FormAbsences : Form
     {
@@ -21,11 +21,6 @@ namespace MediaTek86
         public FormAbsences()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

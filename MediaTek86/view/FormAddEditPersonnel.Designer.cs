@@ -58,7 +58,6 @@ namespace MediaTek86
             this.btnUpdatePersonnel.Size = new System.Drawing.Size(267, 26);
             this.btnUpdatePersonnel.TabIndex = 0;
             this.btnUpdatePersonnel.Values.Text = "{0} le membre";
-            this.btnUpdatePersonnel.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // paletteSuccess
             // 
@@ -309,7 +308,6 @@ namespace MediaTek86
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MediaTek86 - {0} un personnel";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.comboService)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
