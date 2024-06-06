@@ -100,13 +100,13 @@ namespace MediaTek86
 
                     if (TypeUpdatePersonnel == "ADD")
                     {
-                        Personnel personnel = new Personnel(0, textFirstname.Text, textName.Text, textNumber.Text, textEmail.Text, service);
+                        Personnel personnel = new Personnel(0, textName.Text, textFirstname.Text, textNumber.Text, textEmail.Text, service);
                         controller.AddPersonnel(personnel);
                         NotificationIcon.NotifyWindows("✅ Ajout du membre", "Le membre " + personnel.Prenom + " " + personnel.Nom + " a été ajouté avec succès dans la liste.");
                     }
                     else // EDIT
                     {
-                        Personnel personnel = new Personnel(UpdatePersonnel.Idpersonnel, textFirstname.Text, textName.Text, textNumber.Text, textEmail.Text, service);
+                        Personnel personnel = new Personnel(UpdatePersonnel.Idpersonnel, textName.Text, textFirstname.Text, textNumber.Text, textEmail.Text, service);
                         controller.UpdatePersonnel(personnel);
                         NotificationIcon.NotifyWindows("✅ Modification du membre", "Le membre " + personnel.Prenom + " " + personnel.Nom + " a été modifié avec succès.");
                     }
