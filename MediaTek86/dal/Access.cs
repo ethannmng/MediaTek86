@@ -11,7 +11,7 @@ namespace MediaTek86.dal
         /// <summary>
         /// nom de connexion à la bdd
         /// </summary>
-        private static readonly string connectionName = "server=localhost;user id=mediatek_user;password=Admin123!!;database=mediatek86;SslMode=none";
+        private static readonly string connectionName = "server=localhost;user id=mediatek_user;password=Admin123!!;database=mediatek86";
         /// <summary>
         /// instance unique de la classe
         /// </summary>
@@ -31,8 +31,9 @@ namespace MediaTek86.dal
             {
                 Manager = BddManager.GetInstance(connectionName);
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine("ERREUR >> Impossible de se connecter à la base de données ! (Message d'erreur: " + e.Message + " )");
                 Environment.Exit(0);
             }
         }
