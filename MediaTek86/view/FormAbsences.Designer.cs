@@ -168,6 +168,7 @@ namespace MediaTek86
             this.btnEditAbsence.Size = new System.Drawing.Size(123, 25);
             this.btnEditAbsence.TabIndex = 10;
             this.btnEditAbsence.Values.Text = "Modifier";
+            this.btnEditAbsence.Click += new System.EventHandler(this.btnEditAbsence_Click);
             // 
             // btnDeleteAbsence
             // 
@@ -178,6 +179,7 @@ namespace MediaTek86
             this.btnDeleteAbsence.Size = new System.Drawing.Size(110, 25);
             this.btnDeleteAbsence.TabIndex = 10;
             this.btnDeleteAbsence.Values.Text = "Supprimer";
+            this.btnDeleteAbsence.Click += new System.EventHandler(this.btnDeleteAbsence_Click);
             // 
             // btnAddAbsence
             // 
@@ -188,6 +190,7 @@ namespace MediaTek86
             this.btnAddAbsence.Size = new System.Drawing.Size(110, 25);
             this.btnAddAbsence.TabIndex = 9;
             this.btnAddAbsence.Values.Text = "Ajouter";
+            this.btnAddAbsence.Click += new System.EventHandler(this.btnAddAbsence_Click);
             // 
             // paletteSuccess
             // 
@@ -242,6 +245,7 @@ namespace MediaTek86
             this.dgvAbsences.Name = "dgvAbsences";
             this.dgvAbsences.Palette = this.palettePrimary;
             this.dgvAbsences.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
+            this.dgvAbsences.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAbsences.Size = new System.Drawing.Size(489, 302);
             this.dgvAbsences.StateCommon.Background.Color1 = System.Drawing.Color.Gainsboro;
             this.dgvAbsences.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
@@ -281,7 +285,6 @@ namespace MediaTek86
             this.Name = "FormAbsences";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MediaTek86 - Gestion des absences";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.grpListAbsences.Panel)).EndInit();
             this.grpListAbsences.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpListAbsences)).EndInit();

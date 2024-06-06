@@ -33,7 +33,7 @@ namespace MediaTek86
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAuthentification));
             this.PalettePrimary = new Krypton.Toolkit.KryptonCustomPaletteBase(this.components);
             this.btnConnection = new Krypton.Toolkit.KryptonButton();
-            this.textIdentifiant = new Krypton.Toolkit.KryptonTextBox();
+            this.txtIdentifiant = new Krypton.Toolkit.KryptonTextBox();
             this.labelSubtitle = new Krypton.Toolkit.KryptonLabel();
             this.labelTitle = new Krypton.Toolkit.KryptonLabel();
             this.labelIdentifiant = new Krypton.Toolkit.KryptonLabel();
@@ -98,20 +98,21 @@ namespace MediaTek86
             this.btnConnection.Size = new System.Drawing.Size(397, 39);
             this.btnConnection.TabIndex = 0;
             this.btnConnection.Values.Text = "Connexion";
+            this.btnConnection.Click += new System.EventHandler(this.btnConnection_Click);
             // 
-            // textIdentifiant
+            // txtIdentifiant
             // 
-            this.textIdentifiant.Location = new System.Drawing.Point(36, 159);
-            this.textIdentifiant.Name = "textIdentifiant";
-            this.textIdentifiant.Palette = this.PalettePrimary;
-            this.textIdentifiant.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            this.textIdentifiant.Size = new System.Drawing.Size(397, 31);
-            this.textIdentifiant.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtIdentifiant.Location = new System.Drawing.Point(36, 159);
+            this.txtIdentifiant.Name = "txtIdentifiant";
+            this.txtIdentifiant.Palette = this.PalettePrimary;
+            this.txtIdentifiant.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
+            this.txtIdentifiant.Size = new System.Drawing.Size(397, 31);
+            this.txtIdentifiant.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textIdentifiant.StateCommon.Border.Rounding = 15F;
-            this.textIdentifiant.StateCommon.Border.Width = 0;
-            this.textIdentifiant.TabIndex = 1;
+            this.txtIdentifiant.StateCommon.Border.Rounding = 15F;
+            this.txtIdentifiant.StateCommon.Border.Width = 0;
+            this.txtIdentifiant.TabIndex = 1;
             // 
             // labelSubtitle
             // 
@@ -188,7 +189,7 @@ namespace MediaTek86
             this.Controls.Add(this.labelSubtitle);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.labelTitle);
-            this.Controls.Add(this.textIdentifiant);
+            this.Controls.Add(this.txtIdentifiant);
             this.Controls.Add(this.btnConnection);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -196,7 +197,6 @@ namespace MediaTek86
             this.Name = "FormAuthentification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MediaTek86 - Authentification";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,7 +207,7 @@ namespace MediaTek86
 
         private Krypton.Toolkit.KryptonCustomPaletteBase PalettePrimary;
         private Krypton.Toolkit.KryptonButton btnConnection;
-        private Krypton.Toolkit.KryptonTextBox textIdentifiant;
+        private Krypton.Toolkit.KryptonTextBox txtIdentifiant;
         private Krypton.Toolkit.KryptonLabel labelSubtitle;
         private Krypton.Toolkit.KryptonLabel labelTitle;
         private Krypton.Toolkit.KryptonPictureBox picLogo;

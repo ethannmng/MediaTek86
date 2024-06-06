@@ -37,12 +37,11 @@ namespace MediaTek86
             this.labelDateStart = new Krypton.Toolkit.KryptonLabel();
             this.labelDateEnd = new Krypton.Toolkit.KryptonLabel();
             this.labelMotif = new Krypton.Toolkit.KryptonLabel();
-            this.comboMotif = new Krypton.Toolkit.KryptonComboBox();
             this.palettePrimary = new Krypton.Toolkit.KryptonCustomPaletteBase(this.components);
             this.btnCancel = new Krypton.Toolkit.KryptonButton();
             this.dtpDateStart = new Krypton.Toolkit.KryptonDateTimePicker();
             this.dtpDateEnd = new Krypton.Toolkit.KryptonDateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.comboMotif)).BeginInit();
+            this.comboMotif = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnUpdateAbsences
@@ -53,7 +52,8 @@ namespace MediaTek86
             this.btnUpdateAbsences.PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             this.btnUpdateAbsences.Size = new System.Drawing.Size(267, 26);
             this.btnUpdateAbsences.TabIndex = 0;
-            this.btnUpdateAbsences.Values.Text = "{0} l\'absence";
+            this.btnUpdateAbsences.Values.Text = "{0} une absence";
+            this.btnUpdateAbsences.Click += new System.EventHandler(this.btnUpdateAbsences_Click);
             // 
             // paletteSuccess
             // 
@@ -111,7 +111,7 @@ namespace MediaTek86
             this.labelTitle.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.labelTitle.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.labelTitle.TabIndex = 2;
-            this.labelTitle.Values.Text = "{0} une absence pour {0}";
+            this.labelTitle.Values.Text = "{0} une absence pour {1}";
             // 
             // labelDateStart
             // 
@@ -139,21 +139,6 @@ namespace MediaTek86
             this.labelMotif.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 9F);
             this.labelMotif.TabIndex = 12;
             this.labelMotif.Values.Text = "Motif de l\'absence:";
-            // 
-            // comboMotif
-            // 
-            this.comboMotif.DropDownWidth = 181;
-            this.comboMotif.IntegralHeight = false;
-            this.comboMotif.Location = new System.Drawing.Point(36, 143);
-            this.comboMotif.Name = "comboMotif";
-            this.comboMotif.Size = new System.Drawing.Size(388, 31);
-            this.comboMotif.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.comboMotif.StateCommon.ComboBox.Border.Rounding = 16F;
-            this.comboMotif.StateCommon.ComboBox.Border.Width = 0;
-            this.comboMotif.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.comboMotif.TabIndex = 13;
             // 
             // palettePrimary
             // 
@@ -210,6 +195,7 @@ namespace MediaTek86
             this.btnCancel.Size = new System.Drawing.Size(115, 26);
             this.btnCancel.TabIndex = 14;
             this.btnCancel.Values.Text = "Annuler";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // dtpDateStart
             // 
@@ -237,16 +223,24 @@ namespace MediaTek86
             this.dtpDateEnd.StateCommon.Border.Width = 0;
             this.dtpDateEnd.TabIndex = 16;
             // 
+            // comboMotif
+            // 
+            this.comboMotif.FormattingEnabled = true;
+            this.comboMotif.Location = new System.Drawing.Point(36, 149);
+            this.comboMotif.Name = "comboMotif";
+            this.comboMotif.Size = new System.Drawing.Size(388, 21);
+            this.comboMotif.TabIndex = 17;
+            // 
             // FormAddEditAbsence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(468, 240);
+            this.Controls.Add(this.comboMotif);
             this.Controls.Add(this.dtpDateEnd);
             this.Controls.Add(this.dtpDateStart);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.comboMotif);
             this.Controls.Add(this.labelMotif);
             this.Controls.Add(this.labelDateEnd);
             this.Controls.Add(this.labelDateStart);
@@ -258,9 +252,7 @@ namespace MediaTek86
             this.MinimizeBox = false;
             this.Name = "FormAddEditAbsence";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MediaTek86 - {0} un personnel";
-            this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.comboMotif)).EndInit();
+            this.Text = "MediaTek86 - {0} une absence";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,11 +265,11 @@ namespace MediaTek86
         private Krypton.Toolkit.KryptonLabel labelDateEnd;
         private Krypton.Toolkit.KryptonLabel labelMotif;
         private Krypton.Toolkit.KryptonCustomPaletteBase paletteSuccess;
-        private Krypton.Toolkit.KryptonComboBox comboMotif;
         private Krypton.Toolkit.KryptonCustomPaletteBase palettePrimary;
         private Krypton.Toolkit.KryptonButton btnCancel;
         private Krypton.Toolkit.KryptonDateTimePicker dtpDateStart;
         private Krypton.Toolkit.KryptonDateTimePicker dtpDateEnd;
+        private System.Windows.Forms.ComboBox comboMotif;
     }
 }
 

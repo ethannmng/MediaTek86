@@ -43,10 +43,9 @@ namespace MediaTek86
             this.labelEmail = new Krypton.Toolkit.KryptonLabel();
             this.textEmail = new Krypton.Toolkit.KryptonTextBox();
             this.labelService = new Krypton.Toolkit.KryptonLabel();
-            this.comboService = new Krypton.Toolkit.KryptonComboBox();
             this.palettePrimary = new Krypton.Toolkit.KryptonCustomPaletteBase(this.components);
             this.btnCancel = new Krypton.Toolkit.KryptonButton();
-            ((System.ComponentModel.ISupportInitialize)(this.comboService)).BeginInit();
+            this.comboService = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnUpdatePersonnel
@@ -58,6 +57,7 @@ namespace MediaTek86
             this.btnUpdatePersonnel.Size = new System.Drawing.Size(267, 26);
             this.btnUpdatePersonnel.TabIndex = 0;
             this.btnUpdatePersonnel.Values.Text = "{0} le membre";
+            this.btnUpdatePersonnel.Click += new System.EventHandler(this.btnUpdatePersonnel_Click);
             // 
             // paletteSuccess
             // 
@@ -157,7 +157,7 @@ namespace MediaTek86
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.textName.StateCommon.Border.Rounding = 15F;
             this.textName.StateCommon.Border.Width = 0;
-            this.textName.TabIndex = 7;
+            this.textName.TabIndex = 2;
             // 
             // labelNumber
             // 
@@ -178,7 +178,7 @@ namespace MediaTek86
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.textNumber.StateCommon.Border.Rounding = 15F;
             this.textNumber.StateCommon.Border.Width = 0;
-            this.textNumber.TabIndex = 8;
+            this.textNumber.TabIndex = 4;
             // 
             // labelEmail
             // 
@@ -199,7 +199,7 @@ namespace MediaTek86
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.textEmail.StateCommon.Border.Rounding = 15F;
             this.textEmail.StateCommon.Border.Width = 0;
-            this.textEmail.TabIndex = 10;
+            this.textEmail.TabIndex = 3;
             // 
             // labelService
             // 
@@ -209,21 +209,6 @@ namespace MediaTek86
             this.labelService.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 9F);
             this.labelService.TabIndex = 12;
             this.labelService.Values.Text = "Service d\'affectation:";
-            // 
-            // comboService
-            // 
-            this.comboService.DropDownWidth = 181;
-            this.comboService.IntegralHeight = false;
-            this.comboService.Location = new System.Drawing.Point(233, 191);
-            this.comboService.Name = "comboService";
-            this.comboService.Size = new System.Drawing.Size(191, 31);
-            this.comboService.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.comboService.StateCommon.ComboBox.Border.Rounding = 16F;
-            this.comboService.StateCommon.ComboBox.Border.Width = 0;
-            this.comboService.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.comboService.TabIndex = 13;
             // 
             // palettePrimary
             // 
@@ -280,6 +265,15 @@ namespace MediaTek86
             this.btnCancel.Size = new System.Drawing.Size(115, 26);
             this.btnCancel.TabIndex = 14;
             this.btnCancel.Values.Text = "Annuler";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // comboService
+            // 
+            this.comboService.FormattingEnabled = true;
+            this.comboService.Location = new System.Drawing.Point(233, 196);
+            this.comboService.Name = "comboService";
+            this.comboService.Size = new System.Drawing.Size(191, 21);
+            this.comboService.TabIndex = 5;
             // 
             // FormAddEditPersonnel
             // 
@@ -287,8 +281,8 @@ namespace MediaTek86
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(468, 285);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.comboService);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.labelService);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.textEmail);
@@ -307,8 +301,6 @@ namespace MediaTek86
             this.Name = "FormAddEditPersonnel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MediaTek86 - {0} un personnel";
-            this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.comboService)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,9 +319,9 @@ namespace MediaTek86
         private Krypton.Toolkit.KryptonTextBox textEmail;
         private Krypton.Toolkit.KryptonLabel labelService;
         private Krypton.Toolkit.KryptonCustomPaletteBase paletteSuccess;
-        private Krypton.Toolkit.KryptonComboBox comboService;
         private Krypton.Toolkit.KryptonCustomPaletteBase palettePrimary;
         private Krypton.Toolkit.KryptonButton btnCancel;
+        private System.Windows.Forms.ComboBox comboService;
     }
 }
 
