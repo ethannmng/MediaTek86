@@ -42,7 +42,7 @@ namespace MediaTek86
             List<Absence> absences = controller.GetAbsences(personnelSelected);
             dgvAbsences.DataSource = absences;
             dgvAbsences.Columns["personnel"].Visible = false;
-            dgvAbsences.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvAbsences.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         /// <summary>

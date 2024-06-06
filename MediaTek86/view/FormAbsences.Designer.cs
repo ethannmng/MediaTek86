@@ -255,18 +255,18 @@ namespace MediaTek86
             // 
             this.labelDesc.Location = new System.Drawing.Point(12, 12);
             this.labelDesc.Name = "labelDesc";
-            this.labelDesc.Size = new System.Drawing.Size(149, 21);
+            this.labelDesc.Size = new System.Drawing.Size(139, 21);
             this.labelDesc.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 9F);
             this.labelDesc.TabIndex = 9;
-            this.labelDesc.Values.Text = "Membre du personnel:";
+            this.labelDesc.Values.Text = "Membre sélectionné:";
             // 
             // labelPersonnelChoise
             // 
             this.labelPersonnelChoise.AutoSize = false;
-            this.labelPersonnelChoise.Location = new System.Drawing.Point(157, 9);
+            this.labelPersonnelChoise.Location = new System.Drawing.Point(140, 9);
             this.labelPersonnelChoise.Name = "labelPersonnelChoise";
             this.labelPersonnelChoise.Size = new System.Drawing.Size(350, 27);
-            this.labelPersonnelChoise.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 12F);
+            this.labelPersonnelChoise.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 10F);
             this.labelPersonnelChoise.TabIndex = 10;
             this.labelPersonnelChoise.Values.Text = "{0}";
             // 

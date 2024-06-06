@@ -1,5 +1,6 @@
 ﻿using MediaTek86.bddmanager;
 using System;
+using System.Windows.Forms;
 
 namespace MediaTek86.dal
 {
@@ -34,6 +35,7 @@ namespace MediaTek86.dal
             catch (Exception e)
             {
                 Console.WriteLine("ERREUR >> Impossible de se connecter à la base de données ! (Message d'erreur: " + e.Message + " )");
+                MessageBox.Show("Erreur: impossible de démarrer MediaTek86. \r\n\r\nLa communication avec la base de données a échouée ! \r\nVeuillez vérifier votre connexion internet et réessayer.", "Mediatek86 - Impossible de démarrer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(0);
             }
         }

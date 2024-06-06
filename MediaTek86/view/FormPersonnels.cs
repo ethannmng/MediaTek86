@@ -42,7 +42,7 @@ namespace MediaTek86
             List<Personnel> lesPersonnels = controller.GetPersonnels();
             dgvPersonnels.DataSource = lesPersonnels;
             dgvPersonnels.Columns["idpersonnel"].Visible = false;
-            dgvPersonnels.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvPersonnels.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         /// <summary>
