@@ -61,6 +61,16 @@ namespace MediaTek86.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+        /// </summary>
+        internal static System.Drawing.Icon MEDIATEK86_ICO {
+            get {
+                object obj = ResourceManager.GetObject("MEDIATEK86_ICO", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap MEDIATEK86_ICON {

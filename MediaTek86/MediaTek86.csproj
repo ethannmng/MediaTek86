@@ -57,13 +57,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bddmanager\BddManager.cs" />
+    <Compile Include="controller\FormAbsencesController.cs" />
+    <Compile Include="controller\FormAddEditAbsenceController.cs" />
+    <Compile Include="controller\FormAddEditPersonnelController.cs" />
     <Compile Include="controller\FormAuthentificationController.cs" />
+    <Compile Include="controller\FormPersonnelsController.cs" />
     <Compile Include="dal\Access.cs" />
+    <Compile Include="dal\GestionAccess.cs" />
     <Compile Include="model\Absence.cs" />
     <Compile Include="model\Motif.cs" />
     <Compile Include="model\Personnel.cs" />
     <Compile Include="model\Responsable.cs" />
     <Compile Include="model\Service.cs" />
+    <Compile Include="view\assets\NotificationIcon.cs" />
     <Compile Include="view\FormAddEditAbsence.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,9 +141,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\MEDIATEK86_ICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MEDIATEK86_ICO.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,14 +22,5 @@ namespace MediaTek86.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=mediatek_user;database=mediatek86;SslMode=none")]
-        public string connectionString {
-            get {
-                return ((string)(this["connectionString"]));
-            }
-        }
     }
 }
